@@ -1,0 +1,22 @@
+* { margin:0; padding:0;}
+body { font:12px Tahoma, Geneva, sans-serif; background:#eee;}
+
+#container { width:365px; margin:3px;}
+		#keyboard { list-style:none;}
+			#keyboard li { float:left; width:20px; height:20px; line-height:20px; text-align:center; background:#fff; margin:0 2px 2px 0; -moz-border-radius:2px; -webkit-border-radius:2px; border:1px solid #ccc;}
+			
+			.tab, .capslock, .left-shift, .space { clear:left;}
+			
+			#keyboard li.lastitem { width:35px;margin-right:0;}
+			#keyboard li.delete { width:50px;}
+			#keyboard li.tab { width:35px;}
+			#keyboard li.capslock { width:50px;}
+			#keyboard li.enter { width:44px;}
+			#keyboard li.left-shift { width:60px;}
+			#keyboard li.right-shift { width:58px;}
+			#keyboard li.space { width:362px;}
+			
+			#keyboard li:hover, .hover { position:relative; top:1px; left:1px; cursor:pointer; border-color:#e5e5e5;}
+			
+			.on { display:none;}
+			.uppercase { text-transform:uppercase;}

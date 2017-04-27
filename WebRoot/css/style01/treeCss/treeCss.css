@@ -1,0 +1,68 @@
+@CHARSET "UTF-8";
+/*************************************
+ ** vsio2005 viewer. author:javamao **
+ *************************************/
+ /*-*-*-*-*-*-*-*-* Used by DIV Tree(single&muti) *-*-*-*-*-*-*-*-*-*/
+.treeBody{background:url(boxBack.gif)}
+.tree{width:600px}
+.tree A{color:blue;}
+.tree A:hover{color:#f60;}
+.tree span{cursor:pointer;}
+.tree .treePrefix{float:left;}
+.tree .treePrefix span{width:16px;height:20px;display:block;float:left;}
+.tree .plusL{background:url(tree_plusL.gif) center center;cursor:hand;}
+.tree .plusT{background:url(tree_plusT.gif) center center;cursor:hand;}
+.tree .minusL{background:url(tree_minusL.gif) center center;cursor:hand;}
+.tree .minusT{background:url(tree_minusT.gif) center center;cursor:hand;}
+.tree .squareL{background:url(tree_squareL.gif) center center;}
+.tree .squareT{background:url(tree_squareT.gif) center center;}
+.tree .I{background:url(tree_I.gif) center center;}
+.tree .blank{background:url(tree_blank.gif) center center;}
+
+ /*-*-*-*-*-*-*-*-* Used by Table Tree. Tree create by Table/Tr/Td *-*-*-*-*-*-*-*-*-*/
+.tableTree{width:600px}
+.tableTree A{color:blue;}
+.tableTree A:hover{color:#f60;}
+.tableTree span{cursor:pointer;}
+.tableTree .treePrefix{}
+.tableTree .treePrefix span{width:16px;height:20px;display:block;float:left;}
+.tableTree .plusL{background:url(tree_plusL.gif) center center;cursor:hand;}
+.tableTree .plusT{background:url(tree_plusT.gif) center center;cursor:hand;}
+.tableTree .minusL{background:url(tree_minusL.gif) center center;cursor:hand;}
+.tableTree .minusT{background:url(tree_minusT.gif) center center;cursor:hand;}
+.tableTree .squareL{background:url(tree_squareL.gif) center center;}
+.tableTree .squareT{background:url(tree_squareT.gif) center center;}
+.tableTree .I{background:url(tree_I.gif) center center;}
+.tableTree .blank{background:url(tree_blank.gif) center center;}
+
+/*-*-*-*-*-*-*-*-* Used by Ajax Tree's(single&muti). Ajax Tree is created by DIV *-*-*-*-*-*-*-*-*-*/
+.tree_ajax{width:600px}
+.tree_ajax A{color:blue;}
+.tree_ajax A:hover{color:#f60;}
+.tree_ajax span{cursor:pointer;}
+.tree_ajax .treePrefix{float:left;}
+.tree_ajax .treePrefix span{width:16px;height:20px;display:block;float:left;}
+.tree_ajax .plusL{background:url(tree_plusL.gif) center center;cursor:hand;}
+.tree_ajax .plusT{background:url(tree_plusT.gif) center center;cursor:hand;}
+.tree_ajax .minusL{background:url(tree_minusL.gif) center center;cursor:hand;}
+.tree_ajax .minusT{background:url(tree_minusT.gif) center center;cursor:hand;}
+.tree_ajax .squareL{background:url(tree_squareL.gif) center center;}
+.tree_ajax .squareT{background:url(tree_squareT.gif) center center;}
+.tree_ajax .I{background:url(tree_I.gif) center center;}
+.tree_ajax .blank{background:url(tree_blank.gif) center center;}
+
+/*-*-*-*-*-*-*-*-*-*-* Normal Ul/Li Tree. Used by AjaxIncludeTree *-*-*-*-*-*-*-*/
+.ulTree_dictModule{margin-left:10px;padding-left:0px;}
+.ulTree_dictModule ul{margin-left:20px;padding-left:0px;}
+.ulTree_dictModule li{list-style-type:none;width:200px;cursor:pointer;line-height:18px;width:500px;}
+.ulTree_dictModule .plus{background:url(ulTree_plus.gif) no-repeat left center;}
+.ulTree_dictModule .minus{background:url(ulTree_minus.gif) no-repeat left center;}
+.ulTree_dictModule .square{background:url(ulTree_square.gif) no-repeat left center;}
+
+/*-*-*-*-*-*-*-*-*-*-* ul tree *-*-*-*-*-*-*-*/
+.ulTree{margin-left:20px;}
+.ulTree ul{margin-left:12px;}
+.ulTree li{list-style-type:none;width:200px;cursor:pointer;line-height:18px;width:500px;padding-left:12px;}
+.ulTree .plus{background:url(ulTree_plus.gif) no-repeat left center;}
+.ulTree .minus{background:url(ulTree_minus.gif) no-repeat left center;}
+.ulTree .square{background:url(ulTree_square.gif) no-repeat left center;}

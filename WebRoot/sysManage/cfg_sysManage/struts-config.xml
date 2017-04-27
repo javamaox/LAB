@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="functionForm" type="com.qtrmoon.sysManage.bean.FunctionForm" />
+		<form-bean name="functionUnitForm" type="com.qtrmoon.sysManage.bean.FunctionUnitForm" />
+		<form-bean name="organForm" type="com.qtrmoon.sysManage.bean.OrganForm" />
+		<form-bean name="roleForm" type="com.qtrmoon.sysManage.bean.RoleForm" />
+		<form-bean name="userForm" type="com.qtrmoon.sysManage.bean.UserForm" />
+		<form-bean name="machineForm" type="com.qtrmoon.sysManage.bean.MachineForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards></global-forwards>
+	<action-mappings>
+		<action attribute="functionForm" name="functionForm" parameter="method" path="/function" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy" validate="false">
+			<forward name="updFunction" path="/sysManage/function_upd.jsp" contextRelative="true" />
+			<forward name="reply" path="/sysManage/function_reply.jsp" contextRelative="true" />
+			<forward name="schFunctionTree" path="/sysManage/function_schTree.jsp" contextRelative="true" />
+			<forward name="addFunction" path="/sysManage/function_add.jsp" contextRelative="true" />
+		</action>
+		<action attribute="functionUnitForm" name="functionUnitForm" parameter="method" path="/functionUnit"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy" validate="false">
+			<forward name="reply" path="/sysManage/functionUnit_reply.jsp" contextRelative="true" />
+			<forward name="schFunctionUnit" path="/sysManage/functionUnit_sch.jsp" contextRelative="true" />
+			<forward name="addFunctionUnit" path="/sysManage/functionUnit_add.jsp" contextRelative="true" />
+			<forward name="updFunctionUnit" path="/sysManage/functionUnit_upd.jsp" contextRelative="true" />
+		</action>
+		<action attribute="organForm" name="organForm" parameter="method" path="/organ" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy" validate="false">
+			<forward name="schOrganTree" path="/sysManage/organ_schTree.jsp" contextRelative="true" />
+			<forward name="reply" path="/sysManage/organ_reply.jsp" contextRelative="true" />
+			<forward name="addOrgan" path="/sysManage/organ_add.jsp" contextRelative="true" />
+			<forward name="updOrgan" path="/sysManage/organ_upd.jsp" contextRelative="true" />
+		</action>
+		<action attribute="roleForm" name="roleForm" parameter="method" path="/role" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="schOrganTree" path="/sysManage/organ_schTree.jsp" contextRelative="true" />
+			<forward name="schRole" path="/sysManage/role_sch.jsp" contextRelative="true" />
+			<forward name="addRole" path="/sysManage/role_add.jsp" contextRelative="true" />
+			<forward name="updRole" path="/sysManage/role_upd.jsp" contextRelative="true" />
+			<forward name="listRole" path="/role.do?method=schRole" />
+			<forward name="reply" path="/sysManage/role_reply.jsp" contextRelative="true" />
+			<forward name="addAdminRole" path="/sysManage/role_admin_add.jsp" contextRelative="true" />
+			<forward name="updAdminRole" path="/sysManage/role_admin_upd.jsp" contextRelative="true" />
+		</action>
+		<action attribute="userForm" name="userForm" parameter="method" path="/user" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="schUser" path="/sysManage/user_sch.jsp" />
+			<forward name="setRoles" path="/sysManage/user_schMyAbleRoles.jsp" contextRelative="true" />
+			<forward name="schOrganTree" path="/sysManage/organ_schTree.jsp" contextRelative="true" />
+			<forward name="schUser" path="/sysManage/user_sch.jsp" contextRelative="true" />
+			<forward name="addUser" path="/sysManage/user_add.jsp" contextRelative="true" />
+			<forward name="view" path="/sysManage/user_view.jsp" contextRelative="true" />
+			<forward name="updUser" path="/sysManage/user_upd.jsp" contextRelative="true" />
+			<forward name="reply" path="/sysManage/user_reply.jsp" contextRelative="true" />
+			<forward name="updUserInfo" path="/sysManage/userInfo_upd.jsp" contextRelative="true" />
+			<forward name="perUpdPassword" path="/sysManage/user_password_upd.jsp" contextRelative="true" />
+		</action>
+		<action attribute="userForm" name="userForm" parameter="method" path="/login" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy" validate="false">
+			<forward name="remind" path="/sysManage/mainFrame/remind.jsp" contextRelative="true" />
+			<forward name="toLogin" path="/sysManage/user_toLogin.jsp" contextRelative="true" />
+			<forward name="title" path="/sysManage/mainFrame/title.jsp" contextRelative="true" />
+			<forward name="login" path="/sysManage/mainFrame/mainframe.jsp" contextRelative="true" />
+			<forward name="login_icon" path="/sysManage/mainFrame/icon_mainframe.jsp" contextRelative="true" />
+			<forward name="iconNav" path="/sysManage/mainFrame/icon_nav.jsp" contextRelative="true" />
+			<forward name="toRegister" path="/sysManage/user_register.jsp" contextRelative="true" />
+			<forward name="bottom" path="/sysManage/mainFrame/bottom.jsp" contextRelative="true" />
+			<forward name="logout" path="/sysManage/user_login.jsp" contextRelative="true" />
+			<forward name="menu" path="/sysManage/mainFrame/menu.jsp" contextRelative="true" />
+			<forward name="showSub" path="/sysManage/mainFrame/showSub.jsp" contextRelative="true" />
+		</action>
+		<action attribute="machineForm" name="machineForm" parameter="method" path="/machine" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy" validate="false">
+			<forward name="updMachine" path="/sysManage/machine_upd.jsp" contextRelative="true" />
+			<forward name="schMachine" path="/sysManage/machine_sch.jsp" contextRelative="true" />
+			<forward name="addMachine" path="/sysManage/machine_add.jsp" contextRelative="true" />
+		</action>
+		<action parameter="method" path="/transact" scope="request" type="com.qtrmoon.sysManage.transact.InfoAction"
+			validate="false">
+		</action>
+	</action-mappings>
+	<message-resources parameter="com.qtrmoon.struts.ApplicationResources" />
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation" value="/sysManage/cfg_sysManage/applicationContext.xml" />
+	</plug-in>
+</struts-config>

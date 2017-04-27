@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxool>
+	<alias>DBPool</alias>
+	<driver-url>jdbc:oracle:thin:@127.0.0.1:1521:orcl</driver-url>
+	<driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+	<driver-properties>
+		<property name="user" value="LAB" />
+		<property name="password" value="LAB" />
+	</driver-properties>
+	<house-keeping-sleep-time>90000</house-keeping-sleep-time>
+	<maximum-new-connections>20</maximum-new-connections>
+	<prototype-count>5</prototype-count>
+	<maximum-connection-count>100</maximum-connection-count>
+	<minimum-connection-count>10</minimum-connection-count>
+</proxool>
+
+	

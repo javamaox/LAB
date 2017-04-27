@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="dictForm" type="com.qtrmoon.dictEditor.beanSerDao.DictionaryForm" />
+		<form-bean name="dictCatalog" type="com.qtrmoon.dictEditor.beanSerDao.DictCatalog" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<action attribute="dictForm" name="dictForm" parameter="method" path="/dict" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy" validate="false">
+			<forward name="schCatalog" path="/dictEditor/catalog_sch.jsp" contextRelative="true" />
+			<forward name="schCatalogGroup" path="/dictEditor/catalog_schGroup.jsp" contextRelative="true" />
+			<forward name="schDictTree" path="/dictEditor/dictTree_sch.jsp" contextRelative="true" />
+		</action>
+		<action attribute="dictCatalog" name="dictCatalog" parameter="method" path="/catalog" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy" validate="false">
+			<forward name="addCatalog" path="/dictEditor/catalog_add.jsp" contextRelative="true" />
+		</action>
+		<action parameter="method" path="/dictTree" scope="request" type="com.qtrmoon.dictEditor.action.DictTreeAction"
+			validate="false">
+			<forward name="treeTag_pop" path="/dictEditor/treeTag_pop.jsp" contextRelative="true" />
+			<forward name="treeTag_include" path="/dictEditor/treeTag_include.jsp" contextRelative="true" />
+			<forward name="treeTag_ai" path="/dictEditor/treeTag_ai.jsp" contextRelative="true" />
+			<forward name="checkboxInList" path="/dictEditor/treeTag_checkboxInList.jsp" contextRelative="true" />
+		</action>
+		<action attribute="dictForm" name="dictForm" parameter="method" path="/transfer" scope="request"
+			type="com.qtrmoon.dictEditor.action.DictTransferAction" validate="false">
+			<forward name="import" path="/dictEditor/import.jsp" contextRelative="true" />
+		</action>
+	</action-mappings>
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation" value="/dictEditor/cfg_dictEditor/applicationContext.xml" />
+	</plug-in>
+</struts-config>

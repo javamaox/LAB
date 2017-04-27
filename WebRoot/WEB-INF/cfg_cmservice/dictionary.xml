@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean name="dictModule" class="com.qtrmoon.dictEditor.DictBuffer" lazy-init="false">
+		<property name="dictService">
+			<bean parent="txProxyTemplate">
+				<property name="target">
+					<bean class="com.qtrmoon.dictEditor.beanSerDao.DictService">
+						<property name="dictDAO">
+							<bean class="com.qtrmoon.dictEditor.beanSerDao.DictDao">
+								<property name="sessionFactory">
+									<ref bean="hibernateSessionFactory" />
+								</property>
+							</bean>
+						</property>
+					</bean>
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>

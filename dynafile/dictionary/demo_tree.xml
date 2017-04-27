@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="GB2312"?>
+<dictionary>
+	<col>
+		<id>ZH</id>
+		<pid></pid>
+		<label>综合办公室</label>
+	</col>
+	<col>
+		<id>RW</id>
+		<pid>ZH</pid>
+		<label>人民武装办公室</label>
+	</col>
+	<col>
+		<id>JD</id>
+		<pid>ZH</pid>
+		<label>经济动员办公室</label>
+	</col>
+	<col>
+		<id>JZ</id>
+		<pid>ZH</pid>
+		<label>交通战备办公室</label>
+	</col>
+	<col>
+		<id>RF</id>
+		<pid>ZH</pid>
+		<label>人民防空办公室</label>
+	</col>
+	<col>
+		<id>XX</id>
+		<pid>ZH</pid>
+		<label>信息动员办公室</label>
+	</col>
+	<col>
+		<id>KJ</id>
+		<pid>ZH</pid>
+		<label>科技动员办公室</label>
+	</col>
+	<col>
+		<id>ZZ</id>
+		<pid>ZH</pid>
+		<label>政治动员办公室</label>
+	</col>
+</dictionary>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/dict.do" location="628,0" dimension="358,84" />
+  <StrutsActivity path="/catalog.do" location="0,321" dimension="358,84" />
+  <StrutsActivity path="/dictTree.do" location="403,321" dimension="310,84" />
+  <StrutsActivity path="/dictEditor/dictTree_sch.jsp" location="852,216" dimension="208,48" />
+  <StrutsActivity path="/dictEditor/catalog_sch.jsp" location="1420,216" dimension="202,48" />
+  <StrutsActivity path="/dictEditor/catalog_schGroup.jsp" location="50,650" dimension="232,48" />
+  <StrutsActivity path="/dictEditor/catalog_add.jsp" location="78,505" dimension="202,48" />
+  <StrutsActivity path="/dictEditor/treeTag_ai.jsp" location="950,650" dimension="196,48" />
+  <StrutsActivity path="/dictEditor/treeTag_checkboxInList.jsp" location="50,750" dimension="268,48" />
+  <StrutsActivity path="/dictEditor/treeTag_include.jsp" location="650,650" dimension="226,48" />
+  <StrutsActivity path="/dictEditor/treeTag_pop.jsp" location="350,650" dimension="202,48" />
+  <StrutsActivity path="/dictEditor/dictTree_tag.jsp" location="454,505" dimension="208,48" />
+  <StrutsActivity path="/dictEditor/dictTree_feedback.jsp" location="950,350" dimension="238,48" />
+  <StrutsActivity path="/dictEditor/dictTree_add.jsp" location="950,450" dimension="208,48" />
+  <StrutsActivity path="/dictEditor/dictTree_upd.jsp" location="950,550" dimension="208,48" />
+  <StrutsActivity path="/dictEditor/dict_upd.jsp" location="0,216" dimension="184,48" />
+  <StrutsActivity path="/dictEditor/dict_sch.jsp" location="284,216" dimension="184,48" />
+  <StrutsActivity path="/dictEditor/dict_add.jsp" location="568,216" dimension="184,48" />
+  <StrutsActivity path="/transfer.do" />
+  <StrutsActivity path="/dictEditor/import.jsp" />
+  <StrutsTransition id="/catalog.do,addCatalog,/dictEditor/catalog_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="179,405" />
+      <AbsolutePoint location="179,505" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dict.do,schCatalog,/dictEditor/catalog_sch.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="986,12" />
+      <AbsolutePoint location="1521,12" />
+      <AbsolutePoint location="1521,216" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dict.do,schDictTree,/dictEditor/dictTree_sch.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="867,84" />
+      <AbsolutePoint location="867,216" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dictTree.do,treeTag_pop,/dictEditor/treeTag_pop.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="439,405" />
+      <AbsolutePoint location="439,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dictTree.do,checkboxInList,/dictEditor/treeTag_checkboxInList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="558,363" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dictTree.do,treeTag_include,/dictEditor/treeTag_include.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="558,363" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dictTree.do,treeTag_ai,/dictEditor/treeTag_ai.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="558,363" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dict.do,schCatalogGroup,/dictEditor/catalog_schGroup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="807,42" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/transfer.do,import,/dictEditor/import.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

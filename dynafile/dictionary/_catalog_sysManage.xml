@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="GB2312"?>
+<catalogTables>
+	<description>系统管理字典组</description>
+	<table>
+		<id>sys_function</id>
+		<tablename>sys_function</tablename>
+		<tabledesc>全功能字典</tabledesc>
+		<style>T#D#X</style>
+		<pattern>2</pattern>
+		<orderBy>ord</orderBy>
+		<mode>0</mode>
+		<mapping>
+			<id>ID</id>
+			<pid>PID</pid>
+			<label>NAME</label>
+		</mapping>
+	</table>
+	<table>
+		<id>sys_menu</id>
+		<tablename>sys_function</tablename>
+		<tabledesc>功能菜单字典</tabledesc>
+		<style>T#D#X</style>
+		<pattern>2</pattern>
+		<mode>0</mode>
+		<mapping>
+			<id>ID</id>
+			<pid>PID</pid>
+			<label>NAME</label>
+		</mapping>
+		<sql>and t.isshow='1'</sql>
+	</table>
+	<table>
+		<id>sys_organType</id>
+		<tablename>sys_organType.xml</tablename>
+		<tabledesc>机构类别</tabledesc>
+		<style>2</style>
+		<pattern>2</pattern>
+	</table>
+	<table>
+		<id>sysOrgan</id>
+		<tablename>sys_organ</tablename>
+		<tabledesc>组织机构</tabledesc>
+		<style>T#D#X</style>
+		<pattern>2</pattern>
+		<mode>0</mode>
+		<mapping>
+			<id>ID</id>
+			<pid>PID</pid>
+			<label>NAME</label>
+		</mapping>
+	</table>
+</catalogTables>

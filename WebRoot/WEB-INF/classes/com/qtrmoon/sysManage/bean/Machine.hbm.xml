@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.qtrmoon.sysManage.bean.Machine" table="SYS_MACHINE">
+        <id name="id" type="java.lang.String">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="addtime" type="java.util.Date">
+            <column name="ADDTIME" />
+        </property>
+        <property name="ip" type="java.lang.String">
+            <column name="IP" />
+        </property>
+        <property name="mac" type="java.lang.String">
+            <column name="MAC" />
+        </property>
+        <property name="organid" type="java.lang.String">
+            <column name="ORGANID" />
+        </property>
+    </class>
+</hibernate-mapping>

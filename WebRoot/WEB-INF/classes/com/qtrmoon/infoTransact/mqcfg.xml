@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mqcfg>
+	<agent-ip>192.168.0.43</agent-ip>
+	<agent-port>1414</agent-port>
+	<agent-app>
+		<appid name="organ" listener="com.qtrmoon.sysManage.transact.OrganListener">1at1</appid>
+	</agent-app>
+	<firstrun>false</firstrun>
+</mqcfg>

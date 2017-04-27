@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GB2312"?>
+<dictionary>
+  <col>
+    <id>1</id>
+    <pid />
+    <label>男</label>
+  </col>
+  <col>
+    <id>0</id>
+    <pid />
+    <label>女</label>
+  </col>
+  <col>
+    <id>3</id>
+    <pid />
+    <label>恩恩</label>
+  </col>
+</dictionary>
+

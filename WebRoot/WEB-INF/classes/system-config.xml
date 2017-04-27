@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GB2312"?>
+<root>
+  <projectName>LAB</projectName>
+  <projectInfo>系统研发室</projectInfo>
+  <workspace>F:\\workspace\\workspace5.5\\</workspace>
+  <sysid>biggest_</sysid>
+  <sysManage>
+	  <pswmd5>true</pswmd5>
+	  <operMode>icon</operMode>
+	  <userInfoPath>${workspace}\\${projectName}\\dynafile\\userinfo\\</userInfoPath>
+	  <organInfoPath>${workspace}\\${projectName}\\dynafile\\organinfo\\</organInfoPath>
+	  <useLimitMachine>false</useLimitMachine>
+	  <debug>true</debug>
+  </sysManage>
+  <mq>
+	  <usemq>false</usemq>
+	  <mqListener>${workspace}\\${projectName}\\dynafile\\agent\\</mqListener>
+  </mq>
+  <dataAuthority>
+	  <useDataAuthority>true</useDataAuthority>
+	  <dataAuthorityDict>sysOrgan</dataAuthorityDict>
+	  <dataAuthorityPath>${workspace}\\${projectName}\\dynafile\\dataAuthority\\authority.xml</dataAuthorityPath>
+  </dataAuthority>
+  <dictionary>
+	  <!-- or classpath:/dictionary -->
+	  <dictCfg>${workspace}\\${projectName}\\dynafile/dictionary/</dictCfg>
+	  <dbType>oracle</dbType>
+  </dictionary>
+</root>
+

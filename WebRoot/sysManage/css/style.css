@@ -1,0 +1,229 @@
+@CHARSET "UTF-8";
+/*************************************
+ ** vsio2005 viewer. author:javamao **
+ *************************************/
+
+/*-*-*-*-*-*-*-*-*-*-* 通页元素设置 *-*-*-*-*-*-*-*-*-*-*-*/
+body{font-size:12px;margin:0px;}
+form{margin:0px;}
+td{font-size:12px;}
+div{font-size:12px;}
+/*-*-*-*-*-*-*-*-*-*-* 内容页body *-*-*-*-*-*-*-*-*-*-*-*/
+.contentBody {text-align: center;font-size: 13px;color:black;margin:1em;}
+
+/*-*-*-*-*-*-*-*-* 顶条样式定义 (banner.jsp专署)*-*-*-*-*-*-*-*-*/
+.bannerPage{
+	
+}
+.bannerPage #bannerDiv{
+	background:url(imgs/bannerRight.gif) right no-repeat;
+	height:124px;
+}
+.bannerPage #bannerDiv div{
+	background:url(imgs/bannerLeft.gif) left bottom no-repeat;
+	height:124px;
+}
+/* 收缩banner的按钮 */
+.flexButton{
+	width:100%;height:9px;
+	background:url("imgs/flexButtonBack.gif");
+	position:absolute;bottom:0px;
+	text-align:center;
+}
+.flexButton a{
+	width:97px;height:9px;
+	background:url("imgs/flexButtonUp.gif");
+	font-size:1px;
+	position:absolute;
+}
+.flexButtonDown{
+	width:100%;height:9px;
+	background:url("imgs/flexButtonBack.gif");
+	position:absolute;bottom:0px;
+	text-align:center;
+}
+.flexButtonDown a{
+	width:97px;height:9px;
+	background:url("imgs/flexButtonDown.gif");
+	font-size:1px;
+	position:absolute;
+}
+.flexButtonMask{
+	width:100%;height:5px;
+	position:absolute;bottom:0px;
+	font-size:1px;
+}
+/*-*-*-*-*-*-*-*-* 菜单样式定义 (menu.jsp专署)*-*-*-*-*-*-*-*-*/
+.menubody{
+	background:url(imgs/menuBack.gif) #f4f4f4 bottom repeat-x;
+	padding:3px;
+}
+.menubody ul{
+	list-style: none;
+	margin:0px;//IE;
+	padding:0px;//mozia;
+}
+.menubody li{
+	
+}
+.menubody a{
+	padding-left:10px;
+	color:white;
+	text-decoration:none;
+	display:block;
+}
+
+
+.firstMenu{
+	margin: 0px;//IE一级菜单缩进;
+	padding:0px;//mozia
+}
+.firstMenu .firstMenuLi{
+	margin-top:5px;//一级间距;
+	background:url(imgs/menuButton.gif) no-repeat;
+}
+.firstMenu a{
+	font-weight:bolder;line-height:24px;
+	width:160px !important;width:170px;height:24px;
+}
+.firstMenuSelected{
+	margin-top:5px;//一级间距;
+	background:url(imgs/menuButton_o.gif) no-repeat;
+}
+
+.secondMenu{
+	margin-left:1px;//二级菜单缩进;
+	background:#6198c9;
+	border-left:#2e5e96 1px solid;border-right:#2e5e96 1px solid;
+	width:167px !important;width:169px;
+}
+.secondMenu li{
+	margin-top:0px;//二级间距，一级间距覆盖;
+}
+.secondMenu a{
+	background:none;
+	border-bottom: 1px solid #2e5e96;
+	font-weight:normal;line-height:20px;
+	width:157px !important;width:166px;
+}
+.secondMenuSelected{background:yellow;}
+.secondMenuSelected a{color:red}
+
+/*-*-*-*-*-*-*-*-* 竖分割样式定义 (vButtPage.jsp专署)*-*-*-*-*-*-*-*-*/
+.vButtPageL{
+	background:url(imgs/vbuttonBack.gif);
+}
+.vButtPageL a{
+	background:url(imgs/vbuttonLeft.gif);
+	width:9px;height:89px;
+	position:absolute;
+	top:40%;
+}
+.vButtPageR{
+	background:url(imgs/vbuttonBack.gif);
+}
+.vButtPageR a{
+	background:url(imgs/vbuttonRight.gif);
+	width:9px;height:89px;
+	position:absolute;
+	top:40%;
+}
+
+/*-*-*-*-*-*-*-*-* title样式定义 (title.jsp专署)*-*-*-*-*-*-*-*-*/
+.titlePage{
+	margin-top:3px;
+	border-bottom:#2e5e96 1px solid;
+	background:#e3e3e3;
+	height:23px;
+}
+.titlePage ul{
+	list-style: none;
+	margin:0px;
+}
+.titlePage li{
+	float: left;
+	height:23px;
+	line-height:23px;
+}
+.titlePage a{
+	background:url(imgs/topL_R.gif) bottom right no-repeat;
+	text-decoration:none;
+	color:black;
+	height:23px;
+	display:block;/**mozia**/
+	float:left;
+	padding-left:10px;
+	padding-right:10px;
+}
+.tableL{
+	background:url(imgs/topL_L.gif) bottom left no-repeat;
+}
+.tableL a{
+	color:black;
+	background:url(imgs/topL_R.gif) bottom right no-repeat;
+}
+.tableM{
+	background:url(imgs/topM_L.gif) bottom left no-repeat;
+}
+.tableM a{
+	color:white;
+	background:url(imgs/topM_R.gif) bottom right no-repeat;padding:0px 20px;
+}
+.tableR{
+	background:url(imgs/topR_L.gif) bottom left no-repeat;
+}
+.tableR a{
+	color:black;
+	background:url(imgs/topR_R.gif) bottom right no-repeat;
+}
+
+
+/*-*-*-*-*-*-*-*-* title样式定义 (title.jsp专署)*-*-*-*-*-*-*-*-*/
+.bottomPage{
+	background:url(imgs/bottomBack.gif) bottom;
+}
+.bottomPage #openRemind{
+	position:absolute;right:10px;top:3px;
+}
+.bottomPage #openRemind a{
+	background:url(imgs/bottomOpenRemind.gif) no-repeat;
+	text-decoration:none;
+}
+/*-*-*-*-*-*-*-*-* remind样式定义 (remind.jsp专署)*-*-*-*-*-*-*-*-*/
+.remindPage{
+	background:url(imgs/remindBack.gif) 0px 20px repeat-x;
+}
+.remindPage ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	margin-left:50px;
+}
+.remindPage li{
+	float:left;
+	padding-left:5px;
+	line-height:32px;
+}
+.remindPage li a{
+	color:blue;
+	text-decoration:none;
+}
+.remindPage li a:hover{
+	color:#f60;
+}
+.remindPage #closeButton{
+	position:absolute;right:0px;
+	width:30px;height:30px;
+	cursor:hand;
+}
+.remindPage #closeButton a{
+	background:url(imgs/remind_close.gif) no-repeat;
+	text-decoration:none;
+}
+
+.showSub_block{width:150px;float:left;margin-bottom:20px;margin-left:20px;margin-right:20px;}
+.showSub_block img{border:0px;}
+.showSub_block .infor{background:transparent;width:100px;height:100px;color:#000;text-align:left;float:left;font-size:15px;font-weight:bolder;}
+.showSub_block .titleBack{padding-top:8px;}
+.showSub_block .titleBack A{background:url(./imgs/titleBack.gif);width:210px;height:31px;color:white;text-decoration:none;text-align:center;font-size:14px;font-weight:bolder;line-height:31px;}
+.showSub_block .titleBack A:hover{background:url(./imgs/titleBack2.gif);color:red}

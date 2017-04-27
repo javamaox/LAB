@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean name="/sysManage/function" class="com.qtrmoon.sysManage.action.FunctionAction" singleton="false">
+		<property name="sysService">
+			<ref bean="sysService" />
+		</property>
+	</bean>
+	<bean name="/sysManage/organ" class="com.qtrmoon.sysManage.action.OrganAction" singleton="false">
+		<property name="sysService">
+			<ref bean="sysService" />
+		</property>
+	</bean>
+	<bean name="/sysManage/user" class="com.qtrmoon.sysManage.action.UserAction" singleton="false">
+		<property name="sysService">
+			<ref bean="sysService" />
+		</property>
+	</bean>
+	<bean name="/sysManage/functionUnit" class="com.qtrmoon.sysManage.action.FunctionUnitAction" singleton="false">
+		<property name="sysService">
+			<ref bean="sysService" />
+		</property>
+	</bean>
+	<bean name="/sysManage/role" class="com.qtrmoon.sysManage.action.RoleAction" singleton="false">
+		<property name="sysService">
+			<ref bean="sysService" />
+		</property>
+	</bean>
+	<bean name="/sysManage/login" class="com.qtrmoon.sysManage.action.LoginAction" singleton="false">
+		<property name="sysService">
+			<ref bean="sysService" />
+		</property>
+	</bean>
+	<bean name="/sysManage/machine" class="com.qtrmoon.sysManage.action.MachineAction" singleton="false">
+		<property name="sysService">
+			<ref bean="sysService" />
+		</property>
+	</bean>
+	<!-- Service Config -->
+	<bean id="sysService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.qtrmoon.sysManage.serDao.SysManageService">
+				<property name="dao">
+					<ref bean="baseDAO" />
+				</property>
+				<property name="sysDao">
+					<ref bean="sysDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- DAO Config -->
+	<bean id="sysDao" class="com.qtrmoon.sysManage.serDao.SysManageDao">
+		<property name="sessionFactory">
+			<ref bean="hibernateSessionFactory" />
+		</property>
+	</bean>
+</beans>

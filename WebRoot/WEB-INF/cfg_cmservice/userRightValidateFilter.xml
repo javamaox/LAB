@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean name="userRightValidateFilter" class="com.qtrmoon.sysManage.UserRightValidateFilter" lazy-init="false">
+		<property name="sysService">
+			<bean parent="txProxyTemplate">
+				<property name="target">
+					<bean class="com.qtrmoon.sysManage.serDao.SysManageService">
+						<property name="dao">
+							<ref bean="baseDAO" />
+						</property>
+						<property name="sysDao">
+							<bean class="com.qtrmoon.sysManage.serDao.SysManageDao">
+								<property name="sessionFactory">
+									<ref bean="hibernateSessionFactory" />
+								</property>
+							</bean>
+						</property>
+					</bean>
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>

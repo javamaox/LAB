@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- DateBase pool config -->
+	<bean id="hibernateSessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation">
+			<value>classpath:/hibernate.cfg.xml</value>
+		</property>
+		<property name="lobHandler">
+			<ref bean="oracleLobHandler" />
+		</property>
+	</bean>
+	<bean id="nativeJdbcExtractor" class="org.springframework.jdbc.support.nativejdbc.SimpleNativeJdbcExtractor" />
+	<bean id="oracleLobHandler" class="org.springframework.jdbc.support.lob.OracleLobHandler" lazy-init="true">
+		<property name="nativeJdbcExtractor">
+			<ref bean="nativeJdbcExtractor" />
+		</property>
+	</bean>
+	<!-- transaction config -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="hibernateSessionFactory" />
+		</property>
+	</bean>
+	<!-- DAO代理配置，利用spring的AOP进行事务管理-->
+	<bean id="txProxyTemplate" abstract="true"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="add*">PROPAGATION_REQUIRED</prop>
+				<prop key="del*">PROPAGATION_REQUIRED</prop>
+				<prop key="upd*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- 定义通用的service事务 baseService是所有的service的父类,提供了基本的CRUD操作-->
+	<bean id="manager" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.qtrmoon.common.BaseService">
+				<property name="dao">
+					<ref bean="baseDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- 定义DAO类,DAO类是所有hibernateDAO的父类,主要完成基本的CRUD操作,里面不进行复杂的业务逻辑操作-->
+	<bean id="baseDAO" class="com.qtrmoon.common.BaseDAO">
+		<property name="sessionFactory">
+			<ref bean="hibernateSessionFactory" />
+		</property>
+	</bean>
+	<!-- 定义公用Service -->
+	<bean id="communalService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.qtrmoon.common.CommunalService">
+				<property name="dao">
+					<ref bean="baseDAO" />
+				</property>
+				<property name="communalDao">
+					<ref bean="communalDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- 定义公用Dao -->
+	<bean id="communalDao" class="com.qtrmoon.common.CommunalDao">
+		<property name="sessionFactory">
+			<ref bean="hibernateSessionFactory" />
+		</property>
+	</bean>
+	<bean id="smartInputServlet" class="com.qtrmoon.toolkit.smartinput.SIServlet">
+		<property name="communalService">
+			<ref bean="communalService" />
+		</property>
+	</bean>
+</beans>

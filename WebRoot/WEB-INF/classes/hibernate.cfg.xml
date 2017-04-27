@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.provider_class">org.hibernate.connection.ProxoolConnectionProvider</property>
+    <property name="hibernate.proxool.pool_alias">DBPool</property>
+    <property name="hibernate.proxool.xml">proxoolconf.xml</property>
+    <property name="jdbc.fetch_size">50</property>
+    <property name="jdbc.batch_size">30</property>
+    <property name="show_sql">true</property>
+    <property name="dialect">org.hibernate.dialect.Oracle9Dialect</property>
+    <mapping resource="com/qtrmoon/sysManage/bean/Role.hbm.xml" />
+    <mapping resource="com/qtrmoon/sysManage/bean/FunctionUnit.hbm.xml" />
+    <mapping resource="com/qtrmoon/sysManage/bean/Function.hbm.xml" />
+    <mapping resource="com/qtrmoon/sysManage/bean/Organ.hbm.xml" />
+    <mapping resource="com/qtrmoon/sysManage/bean/User.hbm.xml" />
+    <mapping resource="com/qtrmoon/sysManage/bean/RoleUser.hbm.xml" />
+    <mapping resource="com/qtrmoon/sysManage/bean/UnitFunction.xml" />
+    <mapping resource="com/qtrmoon/sysManage/bean/RoleFunction.hbm.xml" />
+    <mapping resource="com/qtrmoon/sysManage/bean/OrganUnit.hbm.xml" />
+    <mapping resource="com/qtrmoon/sysManage/bean/Module.hbm.xml" />
+  </session-factory>
+</hibernate-configuration>
+
